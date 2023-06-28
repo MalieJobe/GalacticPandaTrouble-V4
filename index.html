@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        background-color: #2C2F33;
+        color: white;
+        font-family: Arial, sans-serif;
+        }
+        #chatContainer {
+        width: 50%;
+        margin: auto;
+        height: 80vh;
+        }
+        #chatHistory {
+        background-color: #23272A;
+        height: 70vh;
+        overflow-y: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        }
+        #chatControls {
+        display: flex;
+        justify-content: space-between;
+        }
+        #userMessage {
+        flex-basis: 75%;
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        }
+        #sendMessage, #clearHistory {
+        padding: 10px;
+        color: white;
+        background-color: #7289DA;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        }
+        #loader {
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatContainer">
+        <div id="chatHistory"></div>
+        <div id="chatControls">
+            <input type="text" id="userMessage" placeholder="Schreibe eine Nachricht...">
+            <button id="sendMessage">Senden</button>
+            <button id="clearHistory">Chatverlauf löschen</button>
+        </div>
+        <div id="loader" hidden>GPT antwortet...</div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
